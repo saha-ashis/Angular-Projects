@@ -1,0 +1,32 @@
+<div id="register" class="animate form">
+    <form  name="regForm" ng-submit="submitRegForm();" novalidate> 
+        <h1> Sign up </h1> 
+        <p> 
+            <label for="usernamesignup" class="uname" >Your Username</label>
+            <input id="usernamesignup" name="usernamesignup" type="text" placeholder="mysuperusername690" ng-model="username" required/>
+            <span ng-if="regForm.username.$dirty && regForm.username.$invalid" style="color:red;"> Username is required</span>
+        </p>
+        <p> 
+            <label for="emailsignup" class="youmail"  > Your email</label>
+            <input id="emailsignup" name="emailsignup" type="email" placeholder="mysupermail@mail.com" ng-model="email" required/> 
+            <span ng-if="regForm.email.$dirty && regForm.email.$invalid" style="color:red;"> Email is required</span>
+        </p>
+        <p> 
+            <label for="passwordsignup" class="youpasswd" >Your password </label>
+            <input id="passwordsignup" name="passwordsignup" type="password" placeholder="eg. X8df!90EO" ng-model="password" required/>
+            <span ng-if="regForm.password.$dirty && regForm.password.$invalid" style="color:red;"> Password is required</span>
+        </p>
+        <p> 
+            <label for="passwordsignup_confirm" class="youpasswd" >Please confirm your password </label>
+            <input id="passwordsignup_confirm" name="passwordsignup_confirm" type="password" placeholder="eg. X8df!90EO" ng-model="conpassword" required/>
+            <span ng-if="regForm.conpassword.$dirty && regForm.conpassword.$invalid" style="color:red;"> Confirm Your Password</span>
+        </p>
+        <p class="signin button"> 
+            <input type="submit" value="Sign up" ng-disabled="regForm.$invalid"/> 
+        </p>
+        <p class="change_link">  
+            Already a member ?
+            <a href="javascript:void(0)" ng-click="goToLogin();" class="to_register"> Go and log in </a>
+        </p>
+    </form>
+</div>

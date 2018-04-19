@@ -1,0 +1,22 @@
+<div id="login" class="animate form">
+    <form autocomplete="off" name="loginForm" ng-submit="submitLoginForm();" novalidate> 
+        <h1>Log in</h1> 
+        <p> 
+            <label for="username" class="uname" > Your email or username </label>
+            <input id="username" name="username" type="text" placeholder="myusername or mymail@mail.com" ng-model="username" required/>
+            <span ng-if="loginForm.username.$dirty && loginForm.username.$invalid" style="color: red;">Username is required</span>
+        </p>
+        <p> 
+            <label for="password" class="youpasswd"> Your password </label>
+            <input id="password" name="password" type="password" placeholder="eg. X8df!90EO" ng-model="password" required/>
+            <span ng-if="loginForm.password.$dirty && loginForm.password.$invalid" style="color: red"> Password is required</span>
+        </p>
+        <p class="login button"> 
+            <input type="submit" value="Sign In" ng-disabled="loginForm.$invalid"/>
+        </p>
+        <p class="change_link">
+            Not a member yet ?
+            <a href="javascript:void(0)" ng-click="goToReg();" class="to_register">Join us</a>
+        </p>
+    </form>
+</div>

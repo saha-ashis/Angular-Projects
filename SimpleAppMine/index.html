@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> 
+<html lang="en" class="no-js" ng-app="logRegApp"> 
+    <!--<![endif]-->
+    <head >
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Login and Registration</title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link href="assets/css/login.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <!--Start of the Header-->
+            <header>
+                <h1>User Login & Registration</h1>
+            </header>
+            <!--End of the Header-->
+            <section>				
+                <div id="container_demo" >
+                    <div id="wrapper">
+                        <div ng-view></div>
+                    </div>
+                </div>  
+            </section>
+        </div>
+        <script src="assets/js/angular.min.js"></script>
+        <script src="assets/js/angular-route.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controller/login.controller.js"></script>
+        <script src="scripts/controller/reg.controller.js"></script>
+        <script src="scripts/services/user.service.js"></script>
+        <script src="scripts/controller/userdashboard.controller.js"></script>
+    </body>
+</html>
