@@ -1,0 +1,22 @@
+      <form class="login-form" name="loginFrm" ng-submit="save()" novalidate>        
+        <div class="login-wrap">
+            <p class="login-img"><i class="icon_lock_alt"></i></p>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="icon_profile"></i></span>
+              
+			  <input type="text" class="form-control" placeholder="Username" autofocus name="username" ng-model="user.username" required>
+        <span ng-if="loginFrm.username.$dirty && loginFrm.username.$invalid" style="color:red;">Username is required</span>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                <input type="password" class="form-control" placeholder="Password" name="password" ng-model="user.password" required>	
+				<span ng-if="loginFrm.password.$dirty && loginFrm.password.$invalid" style="color:red;">Password is required</span>
+            </div>
+            <!-- <label class="checkbox">
+                <input type="checkbox" value="remember-me"> Remember me
+                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
+            </label> -->
+            <button class="btn btn-primary btn-lg btn-block" type="submit" ng-disabled="loginFrm.$invalid">Login</button>
+            <!-- <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button> -->
+        </div>
+      </form>
